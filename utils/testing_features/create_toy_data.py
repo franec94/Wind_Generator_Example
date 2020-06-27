@@ -1,4 +1,4 @@
-from utils.all_imports.py import *
+from utils.all_imports import *
 
 # ---------------------------------------------------------- #
 # Create Toy Data
@@ -25,7 +25,7 @@ def get_toy_input_data() -> tuple:
   R_app = 0.017  # Ohm
   X_Dsr = 0.068  # Ohm
   s = -0.13
-  return
+  return (U_nom, R_stat, R_rot, R_app, X_Dsr, s)
 
 # ---------------------------------------------------------- #
 # Create Toy Dataset

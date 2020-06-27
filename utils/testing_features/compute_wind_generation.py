@@ -84,7 +84,7 @@ def compute_It(U_nom: float, R_stat: float, R_rot: float, R_app: float, s: float
 
 def compute_P_mecc_by_X(X: np.ndarray) -> np.ndarray:
         
-    R_stat, R_rot, s, It = X[:, 0], X[:, 1], X[:, 2], X[:, 3]
+    R_app, R_rot, s, It = X[:, 0], X[:, 1], X[:, 2], X[:, 3]
 
     assert all(xi < 0 for xi in s), "Error input argument 's' was greater than zero"
 
@@ -130,7 +130,7 @@ def compute_P_mecc(R_stat: float, R_rot: float, s: float, It: float) -> float:
 
 def compute_P_gap_by_X(X: np.ndarray) -> np.ndarray:
         
-    R_stat, R_rot, s, It = X[:, 0], X[:, 1], X[:, 2], X[:, 3]
+    R_app, R_rot, s, It = X[:, 0], X[:, 1], X[:, 2], X[:, 3]
 
     assert all(xi < 0 for xi in s), "Error input argument 's' was greater than zero"
 
@@ -144,7 +144,7 @@ def compute_P_gap_by_X(X: np.ndarray) -> np.ndarray:
         pass
     pass
 
-def compute_P_gap_by_V(R_stat: np.ndarray, R_rot: np.ndarray, s: np.ndarray, It: np.ndarray) -> np.ndarray:
+def compute_P_gap_by_V(R_app: np.ndarray, R_rot: np.ndarray, s: np.ndarray, It: np.ndarray) -> np.ndarray:
     assert s < 0, "Error input argument 's' was greater than zero"
 
     try:
@@ -157,7 +157,7 @@ def compute_P_gap_by_V(R_stat: np.ndarray, R_rot: np.ndarray, s: np.ndarray, It:
         pass
     pass
 
-def compute_P_gap(R_stat: float, R_rot: float, s: float, It: float) -> float:
+def compute_P_gap(R_app: float, R_rot: float, s: float, It: float) -> float:
     assert s < 0, "Error input argument 's' was greater than zero"
 
     try:

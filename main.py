@@ -10,6 +10,7 @@
 from utils.all_imports import *
 from utils.testing_features.compute_wind_generation import *
 from utils.testing_features.create_toy_data import *
+from utils.testing_features.run_simulation import *
 
 
 SEED = 42
@@ -24,17 +25,11 @@ def main():
   var_uim_dict = get_dict_unit_measures_input_data()
   res_uim_dict = get_dict_unit_measures_results()
 
+  # A test
   It = compute_It(U_nom, R_stat, R_rot, R_app, s, X_Dsr)
-  print("%.2f %s" % (It, res_uim_dict['It']))
+  print("A test: It = %.2f %s" % (It, res_uim_dict['It']))
 
-  # np.linspace(start, stop, num=N, endpoint=True, retstep=False, dtype=None, axis=0)
-  rows, cols = N, 6
-  X = create_data_matrix(rows=rows, cols=cols, U_nom=U_nom, R_stat=R_stat, R_rot=R_rot, R_app=R_app, s=s, X_Dsr=X_Dsr)
-
-  cols_X = "U_nom,R_stat,R_rot,R_app,s,X_Dsr".split(',')
-  df_X = pd.DataFrame(data=X, columns=cols_X)
-
-  print(df_X.head())
+  run_simulation(n=N, verbose=0)
   pass
 
 if __name__ == "__main__":

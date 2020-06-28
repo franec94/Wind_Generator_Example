@@ -8,9 +8,9 @@
 # ------------------------------------------# 
 
 from utils.all_imports import *
-from utils.testing_features.compute_wind_generation import *
-from utils.testing_features.create_toy_data import *
-from utils.testing_features.run_simulation import *
+from utils.testing_features_wind_generation.compute_wind_generation import *
+from utils.testing_features_wind_generation.create_toy_data import *
+from utils.testing_features_wind_generation.run_simulation import *
 
 
 SEED = 42

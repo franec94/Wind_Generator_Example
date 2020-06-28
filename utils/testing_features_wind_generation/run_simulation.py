@@ -1,6 +1,6 @@
 from utils.all_imports import *
-from utils.testing_features.create_toy_data import *
-from utils.testing_features.compute_wind_generation import *
+from utils.testing_features_wind_generation.create_toy_data import *
+from utils.testing_features_wind_generation.compute_wind_generation import *
 
 
 def get_data_matrix_X(nrows: int, ncols: int, verbose: int = 0):

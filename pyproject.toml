@@ -1,8 +1,8 @@
 [tool.poetry]
 name = "outrageousunconsciousattributes"
 version = "0.1.0"
-description = ""
-authors = ["Your Name <you@example.com>"]
+description = "Simulation for Computing Wind Energy Quantities"
+authors = ["Francesco Maria Chiarlo franec94@gmail.com"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
